@@ -12,10 +12,16 @@ const Navbar: FC = () => (
         <div className="flex items-center flex-1">
           <Link href="/">
             <a className={s.logo} aria-label="Logo">
-              <Logo />
+              <div style={{ display: 'none' }}>
+                <Logo />
+              </div>
+              <img src={'/Group 32 1.png'} style={{ height: 40 }} />
             </a>
           </Link>
-          <nav className="hidden ml-6 space-x-4 lg:block">
+          <nav
+            className="hidden ml-6 space-x-4 lg:block"
+            style={{ display: 'none' }}
+          >
             <Link href="/search">
               <a className={s.link}>All</a>
             </Link>

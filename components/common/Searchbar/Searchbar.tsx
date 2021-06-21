@@ -22,6 +22,7 @@ const Searchbar: FC<Props> = ({ className, id = 'search' }) => {
           'relative text-sm bg-accents-1 text-base w-full transition-colors duration-150',
           className
         )}
+        style={{ borderRadius: 0 }}
       >
         <label className="hidden" htmlFor={id}>
           Search

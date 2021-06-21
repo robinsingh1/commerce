@@ -9,6 +9,7 @@ import { Heart, Bag } from '@components/icons'
 import { useUI } from '@components/ui/context'
 import DropdownMenu from './DropdownMenu'
 import s from './UserNav.module.css'
+import { Bookmark } from 'react-feather'
 
 interface Props {
   className?: string
@@ -26,6 +27,9 @@ const UserNav: FC<Props> = ({ className }) => {
     <nav className={cn(s.root, className)}>
       <div className={s.mainContainer}>
         <ul className={s.list}>
+          <li className={s.item} onClick={toggleSidebar}>
+            <Bookmark strokeWidth={1.5} height={30} />
+          </li>
           <li className={s.item} onClick={toggleSidebar}>
             <Bag />
             {itemsCount > 0 && <span className={s.bagCount}>{itemsCount}</span>}

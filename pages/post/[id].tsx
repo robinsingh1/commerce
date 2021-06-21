@@ -27,4 +27,5 @@ export default function Post() {
 Post.getInitialProps = (options) => {
   return {}
 }
+
 Post.Layout = Layout
