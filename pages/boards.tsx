@@ -8,10 +8,10 @@ import { useCustomer } from '@framework/customer'
 import { WishlistCard } from '@components/wishlist'
 import useWishlist from '@framework/wishlist/use-wishlist'
 import getAllPages from '@framework/common/get-all-pages'
-import { SearchPage } from '../dripp-web/src/App'
+import { Boards } from '../dripp-web/src/App'
 import { useRouter } from 'next/router'
 
-export default function Search() {
+export default function Board() {
   const { data: customer } = useCustomer()
   const { data, isLoading, isEmpty } = useWishlist({ includeProducts: true })
   const router = useRouter()
@@ -20,12 +20,12 @@ export default function Search() {
 
   return (
     <Container>
-      <SearchPage query={router.query} />
+      <Boards query={router.query} />
     </Container>
   )
 }
-Search.getInitialProps = (options) => {
+Board.getInitialProps = (options) => {
   return {}
 }
 
-Search.Layout = Layout
+Board.Layout = Layout

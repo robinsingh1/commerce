@@ -30,10 +30,7 @@ const UserNav: FC<Props> = ({ className }) => {
           <li className={s.item} onClick={toggleSidebar}>
             <Bookmark strokeWidth={1.5} height={30} />
           </li>
-          <li className={s.item} onClick={toggleSidebar}>
-            <Bag />
-            {itemsCount > 0 && <span className={s.bagCount}>{itemsCount}</span>}
-          </li>
+
           {process.env.COMMERCE_WISHLIST_ENABLED && (
             <li className={s.item}>
               <Link href="/wishlist">
@@ -43,6 +40,10 @@ const UserNav: FC<Props> = ({ className }) => {
               </Link>
             </li>
           )}
+          <li className={s.item} onClick={toggleSidebar}>
+            <Bag />
+            {itemsCount > 0 && <span className={s.bagCount}>{itemsCount}</span>}
+          </li>
           <li className={s.item}>
             {customer ? (
               <DropdownMenu />
