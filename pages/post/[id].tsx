@@ -10,6 +10,24 @@ import useWishlist from '@framework/wishlist/use-wishlist'
 import getAllPages from '@framework/common/get-all-pages'
 import { InfluencerPostDetails } from '../../dripp-web/src/App'
 import { useRouter } from 'next/router'
+import firebase from 'firebase'
+
+var firebaseConfig = {
+  apiKey: 'AIzaSyB7SnAHuew4550eCG0rAMvS3637HcYDREg',
+  authDomain: 'dryp-e44a9.firebaseapp.com',
+  databaseURL: 'https://dryp-e44a9.firebaseio.com',
+  projectId: 'dryp-e44a9',
+  storageBucket: 'dryp-e44a9.appspot.com',
+  messagingSenderId: 'SENDER_ID',
+  appId: '1:979226334513:web:aca5a43ef25fbcdee48c10',
+  measurementId: 'G-MEASUREMENT_ID',
+}
+// Initialize Firebase
+if (!firebase.apps.length) {
+  firebase.initializeApp(firebaseConfig)
+} else {
+  firebase.app() // if already initialized, use that one
+}
 
 export default function Post() {
   const { data: customer } = useCustomer()

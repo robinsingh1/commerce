@@ -10,6 +10,8 @@ import './../dripp-web/src/App.css'
 
 const Noop: FC = ({ children }) => <>{children}</>
 
+import firebase from 'firebase'
+
 export default function MyApp({ Component, pageProps }: AppProps) {
   const Layout = (Component as any).Layout || Noop
 
