@@ -22,7 +22,7 @@ const Footer: FC<Props> = ({ className, pages }) => {
   const rootClassName = cn(className)
 
   return (
-    <footer className={rootClassName}>
+    <footer className={rootClassName} style={{ display: 'none' }}>
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 border-b border-accents-2 py-12 text-primary bg-primary transition-colors duration-150">
           <div className="col-span-1 lg:col-span-2">
@@ -81,7 +81,11 @@ const Footer: FC<Props> = ({ className, pages }) => {
             </div>
           </div>
         </div>
-        <div className="py-12 flex flex-col md:flex-row justify-between items-center space-y-4">
+
+        <div
+          className="py-12 flex flex-col md:flex-row justify-between items-center space-y-4"
+          style={{ display: 'none' }}
+        >
           <div>
             <span>&copy; 2020 ACME, Inc. All rights reserved.</span>
           </div>

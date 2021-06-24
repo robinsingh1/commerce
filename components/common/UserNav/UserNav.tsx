@@ -27,7 +27,12 @@ const UserNav: FC<Props> = ({ className }) => {
     <nav className={cn(s.root, className)}>
       <div className={s.mainContainer}>
         <ul className={s.list}>
-          <li className={s.item} onClick={toggleSidebar}>
+          <li
+            className={s.item}
+            onClick={() => {
+              window.location.href = '/boards'
+            }}
+          >
             <Bookmark strokeWidth={1.5} height={30} />
           </li>
 
